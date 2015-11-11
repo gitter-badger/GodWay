@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Radar Chart</title>
+        <script src="Chart.js"></script>
+        <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <style>
+            canvas{
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" height="450" width="450"></canvas>
+
+
+    <script>
+
+        var pieData = [
+                {
+                    value: 30,
+                    color:"#F38630"
+                },
+                {
+                    value : 50,
+                    color : "#E0E4CC"
+                },
+                {
+                    value : 100,
+                    color : "#69D2E7"
+                }
+            
+            ];
+        // Pie.defaults={
+        var options = {
+        //Boolean - Whether we should show a stroke on each segment
+        // 块和块之间是否有间距
+        segmentShowStroke : true,
+        
+        //String - The colour of each segment stroke
+        // 块和块之间间距的颜色
+        segmentStrokeColor : "#fff",
+        
+        //Number - The width of each segment stroke
+        // 块和块之间间距的宽度
+        segmentStrokeWidth : 2,
+        
+        //Boolean - Whether we should animate the chart    
+        animation : true,
+        
+        //Number - Amount of animation steps
+        animationSteps : 100,
+        
+        //String - Animation easing effect
+        animationEasing : "easeOutBounce",
+        
+        //Boolean - Whether we animate the rotation of the Pie
+        // 是否有从0度到360度的动画
+        animateRotate : true,
+
+        //Boolean - Whether we animate scaling the Pie from the centre
+        // 是否有从中心到边缘的动画
+        animateScale : false,
+        
+        //Function - Will fire on animation completion.
+        onAnimationComplete : null
+    }
+    var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData,options);
+    
+    </script>
+    </body>
+</html>
